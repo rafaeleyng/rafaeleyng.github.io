@@ -41,8 +41,7 @@ const Post = ({ post }) => {
         <ReactMarkdown escapeHtml={false} source={post.document.content} />
       </article>
 
-      {/* TODO comments */}
-      {/* <Disqus pageData={pageData} /> */}
+      <Disqus pageData={pageData} />
     </section>
   )
 

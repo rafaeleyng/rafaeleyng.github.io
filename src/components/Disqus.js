@@ -1,15 +1,17 @@
 const Disqus = ({ pageData }) => {
   const script = `
-  var disqus_shortname = 'TODO';
-  var disqus_identifier = '${pageData.url}';
+var disqus_config = function () {
+  this.page.url = 'https://rafaeleyng.github.io/blog${pageData.url}';
+  this.page.identifier = '${pageData.url}';
+};
 
-  /* * * DON'T EDIT BELOW THIS LINE * * */
-  (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-  `
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-rafaeleyng-github-io-blog.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+`
 
   return (
     <>

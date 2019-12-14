@@ -103,7 +103,7 @@ You should use transactions if (all of the bellow):
 
 ## Lua Scripts
 
-Redis supports of scripts written in Lua. This is by far the method that opens more possibilities of the 3 presented here.
+Redis can execute client-provided scripts written in Lua. This is by far the method that opens more possibilities of the 3 presented here.
 
 A Lua script is loaded on the Redis server and can be later invoked with parameters (using the `EVALSHA` command). You can also send the whole script on every invocation (with the `EVAL` command), but you should avoid doing this for performance reasons.
 
