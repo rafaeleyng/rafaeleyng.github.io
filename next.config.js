@@ -4,23 +4,15 @@ const fs = require('fs');
 const path = require('path');
 const withSass = require('@zeit/next-sass')
 
-const authors = require('./src/data/authors').default
 const { slugify } = require('./src/utils/slug')
 
 module.exports = withSass({
-  exportTrailingSlash: true,
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/blog' : '',
 
   exportPathMap: async function() {
     const paths = {
       '/': { page: '/' },
-      '/authors': { page: '/authors' },
     };
-
-    // generate authors pages
-    const authorsEntries = Object.entries(authors)
-    authorsEntries.forEach(([authorKey]) => {
-      paths[`/authors/${authorKey}`] = { page: '/authors/[authorKey]', query: { authorKey } }
-    })
 
     // generate posts pages
     fs.readdirSync(path.resolve(__dirname, 'src', 'posts')).forEach(filename => {

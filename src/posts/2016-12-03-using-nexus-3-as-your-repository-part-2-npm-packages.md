@@ -2,7 +2,6 @@
 title: "Using Nexus 3 as Your Repository - Part 2: Npm Packages"
 date: 2016-12-03T19:31:27-02:00
 keywords: nexus, repository, private, proxy, npm
-author: rafaeleyng
 excerpt: >
   In this second post of the series, I'll show you how to setup Nexus 3 and configure it to use it as a private npm registry and as a proxy to the official registry.
 ---

@@ -2,7 +2,6 @@
 title: "Redis: Pipelining, Transactions and Lua Scripts"
 date: 2019-11-25
 keywords: redis, pipelining, transaction, lua, scripts
-author: rafaeleyng
 excerpt: >
   Redis offers 3 ways of grouping commands: pipelining, transactions and Lua scripts. The subtleties of using one instead of the other are explored on this post.
 ---

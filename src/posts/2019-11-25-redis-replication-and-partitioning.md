@@ -2,7 +2,6 @@
 title: "Redis: Replication and Partitioning"
 date: 2019-11-25
 keywords: redis, replication, partitioning, distributed system
-author: rafaeleyng
 excerpt: >
   Replication and partitioning are techniques that build the foundation of using Redis as a distributed system, and prepare the way for more complex abstractions like Redis Sentinel and Redis Cluster
 ---

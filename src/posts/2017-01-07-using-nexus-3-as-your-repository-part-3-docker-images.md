@@ -2,7 +2,6 @@
 title: "Using Nexus 3 as Your Repository - Part 3: Docker Images"
 date: 2017-01-07T17:37:14-02:00
 keywords: nexus, repository, private, proxy, docker
-author: rafaeleyng
 excerpt: >
   In this third post of the series, we will setup Nexus 3 to use it as Docker private registry and as a proxy to Docker Hub.
 ---

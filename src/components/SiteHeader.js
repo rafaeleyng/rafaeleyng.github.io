@@ -8,7 +8,6 @@ const SiteHeader = () => {
         <Link href="/"><a className="blog-title">{site.title}</a></Link>
 
         <nav className="blog-menu" >
-          <Link href="/authors"><a>Authors</a></Link>
           <a href="https://github.com/rafaeleyng/blog" target="_blank">Github</a>
         </nav>
       </header>

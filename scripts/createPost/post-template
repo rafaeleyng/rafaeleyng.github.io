@@ -1,7 +1,6 @@
 ---
 title: "<%= title %>"
 date: <%= date %>
-author: TODO
 excerpt: >
   <%= title %>
 ---

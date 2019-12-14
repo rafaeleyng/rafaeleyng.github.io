@@ -1,7 +1,6 @@
 ---
 title: "Practical Guide to Functional Programming"
 date: 2015-07-21T22:46:46-03:00
-author: rafaeleyng
 excerpt: >
   Functional Programming lies somewhere between Computer Science and Mathematics. It is a pretty dense and theoric subject, so the goal here is to show you how to start using some classic functions for collection manipulation in your everyday code.
 ---

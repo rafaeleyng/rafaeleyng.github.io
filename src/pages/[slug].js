@@ -2,15 +2,17 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 
 import Layout from '../components/Layout'
-import AuthorLinks from '../components/AuthorLinks'
 import Disqus from '../components/Disqus'
 
 import { dateMachine, dateHuman } from '../utils/date'
 import getPosts from '../utils/getPosts'
 
-import authors from '../data/authors'
+const Post = ({ post }) => {
+  // TODO temp fix for `favicon.ico` error
+  if (!post) {
+    return null
+  }
 
-const Post = ({ author, authorKey, post }) => {
   const title = post.document.data.title
   const pageData = {
     title,
@@ -21,9 +23,6 @@ const Post = ({ author, authorKey, post }) => {
     <>
       <p className="post-meta">
         <time itemProp="datePublished" dateTime={dateMachine(post.document.data.date)}>{dateHuman(post.document.data.date)}</time>
-      </p>
-      <p>
-        <AuthorLinks authorKey={authorKey} author={author} />
       </p>
     </>
   )
@@ -63,12 +62,7 @@ Post.getInitialProps = async (context) => {
   const posts = getPosts()
   const post = posts.find((p) => p.slug === slug)
 
-  const author = authors[post.document.data.author]
-  const authorKey = post.document.data.author
-
   return {
-    author,
-    authorKey,
     post,
   }
 }
