@@ -33,6 +33,12 @@ module.exports = withSass({
     return paths;
   },
 
+  sassLoaderOptions: {
+    includePaths: [
+      path.resolve(__dirname, 'src', 'components', '_sass', 'config', isProd ? 'production' : 'development'),
+    ],
+  },
+
   webpack: function(config) {
     config.module.rules.push({
       test: /\.md$/,
