@@ -5,7 +5,7 @@ const SiteHeader = () => {
   return (
     <div className="container">
       <header className="site-header single-column">
-        <Link href="/"><a className="blog-title">{site.title}</a></Link>
+        <Link href={process.env.blogPath || '/'}><a className="blog-title">{site.title}</a></Link>
 
         <nav className="blog-menu" >
           <a href="https://github.com/rafaeleyng/blog" target="_blank">Github</a>

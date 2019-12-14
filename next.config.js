@@ -6,8 +6,15 @@ const withSass = require('@zeit/next-sass')
 
 const { slugify } = require('./src/utils/slug')
 
+const isProd = process.env.NODE_ENV === 'production'
+const blogPath = isProd ? '/blog' : ''
+
 module.exports = withSass({
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/blog' : '',
+  assetPrefix: blogPath,
+
+  env: {
+    blogPath,
+  },
 
   exportPathMap: async function() {
     const paths = {
@@ -20,7 +27,7 @@ module.exports = withSass({
         return
       }
       const slug = slugify(filename)
-      paths[`/${slug}`] = { page: '/[slug]', query: { slug } }
+      paths[`/${slug}`] = { page: '/post', query: { slug } }
     });
 
     return paths;
