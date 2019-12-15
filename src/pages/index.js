@@ -17,7 +17,7 @@ const Index = ({ posts }) => {
             <p className="post-meta">
               <time dateTime={dateMachine(postData.date)}>{dateHuman(postData.date)}</time>
             </p>
-            <Link href={{ pathname: '/post', query: { slug: post.slug } }} as={`${process.env.blogPath}/${post.slug}`}>
+            <Link href={{ pathname: '/post', query: { slug: post.slug } }} as={`/${post.slug}`}>
               <a className="post-link">
                 <h2 className="post-title">{ postData.title }</h2>
                 <p className="post-summary">{postData.excerpt}</p>

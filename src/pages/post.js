@@ -2,7 +2,7 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 
 import Layout from '../components/Layout'
-import Disqus from '../components/Disqus'
+// import Disqus from '../components/Disqus'
 
 import { dateMachine, dateHuman } from '../utils/date'
 import getPosts from '../utils/getPosts'
@@ -41,7 +41,7 @@ const Post = ({ post }) => {
         <ReactMarkdown escapeHtml={false} source={post.document.content} />
       </article>
 
-      <Disqus pageData={pageData} />
+      {/* <Disqus pageData={pageData} /> */}
     </section>
   )
 

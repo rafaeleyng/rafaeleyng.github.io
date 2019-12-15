@@ -8,7 +8,8 @@ const SiteHeader = () => {
         <Link href={process.env.blogPath || '/'}><a className="blog-title">{site.title}</a></Link>
 
         <nav className="blog-menu" >
-          <a href="https://github.com/rafaeleyng/blog" target="_blank">Github</a>
+          <a href="https://rafaeleyng.github.io/me" target="_blank">About</a>
+          <a href="https://github.com/rafaeleyng/rafaeleyng.github.io" target="_blank">Github</a>
         </nav>
       </header>
     </div>

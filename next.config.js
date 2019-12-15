@@ -6,16 +6,7 @@ const withSass = require('@zeit/next-sass')
 
 const { slugify } = require('./src/utils/slug')
 
-const isProd = process.env.NODE_ENV === 'production'
-const blogPath = isProd ? '/blog' : ''
-
 module.exports = withSass({
-  assetPrefix: blogPath,
-
-  env: {
-    blogPath,
-  },
-
   exportPathMap: async function() {
     const paths = {
       '/': { page: '/' },
@@ -31,12 +22,6 @@ module.exports = withSass({
     });
 
     return paths;
-  },
-
-  sassLoaderOptions: {
-    includePaths: [
-      path.resolve(__dirname, 'src', 'components', '_sass', 'config', isProd ? 'production' : 'development'),
-    ],
   },
 
   webpack: function(config) {

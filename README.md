@@ -1,9 +1,9 @@
-# [rafaeleyng's blog](https://rafaeleyng.github.io/blog/)
+# [rafaeleyng's blog](https://rafaeleyng.github.io/)
 
 ## branches
 
-- `master`: is the default branch
-- `gh-pages`: is the branch deployed to Github Pages, with generated code
+- `dev`: is the default branch
+- `master`: is the branch deployed to Github Pages, with generated code
 
 ## install
 

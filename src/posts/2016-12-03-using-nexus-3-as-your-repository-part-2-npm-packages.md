@@ -14,7 +14,7 @@ This is the second part of a series of posts on Nexus 3 and how to use it as rep
 
 ## Installation
 
-Check out the [first part](https://rafaeleyng.github.io/blog/using-nexus-3-as-your-repository-part-1-maven-artifacts/) of this series to see how we installed and ran Nexus 3 using a single docker command. Just do that and the installation is done.
+Check out the [first part](https://rafaeleyng.github.io/using-nexus-3-as-your-repository-part-1-maven-artifacts/) of this series to see how we installed and ran Nexus 3 using a single docker command. Just do that and the installation is done.
 
 ## Configuring Nexus as a npm repo
 

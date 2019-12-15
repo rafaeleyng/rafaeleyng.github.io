@@ -1,13 +1,13 @@
 const Disqus = ({ pageData }) => {
   const script = `
 var disqus_config = function () {
-  this.page.url = 'https://rafaeleyng.github.io/blog${pageData.url}';
+  this.page.url = 'https://rafaeleyng.github.io${pageData.url}';
   this.page.identifier = '${pageData.url}';
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
   var d = document, s = d.createElement('script');
-  s.src = 'https://https-rafaeleyng-github-io-blog.disqus.com/embed.js';
+  s.src = 'https://https-rafaeleyng-github-io.disqus.com/embed.js';
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
 })();
