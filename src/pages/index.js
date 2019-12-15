@@ -40,6 +40,9 @@ export default Index
 
 Index.getInitialProps = async function() {
   const posts = getPosts()
+  posts.forEach((p) => {
+    delete p.document.content
+  })
 
   return {
     posts,

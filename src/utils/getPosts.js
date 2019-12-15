@@ -13,6 +13,10 @@ const getPosts = () => {
     const document = matter(value.default)
     const slug = slugify(key)
 
+    delete document.orig
+    delete document.excerpt
+    delete document.isEmpty
+
     return {
       document,
       slug,
