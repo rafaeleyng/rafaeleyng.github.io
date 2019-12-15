@@ -1,5 +1,3 @@
-import site from '../data/site'
-
 const GoogleAnalytics = () => {
   const script = `
 window.dataLayer = window.dataLayer || [];
