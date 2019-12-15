@@ -34728,6 +34728,62 @@ var ContentHeader = function ContentHeader(_ref) {
 
 /***/ }),
 
+/***/ "./components/Disqus.js":
+/*!******************************!*\
+  !*** ./components/Disqus.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/rafael.eyng/code/rafael/rafaeleyng.github.io/src/components/Disqus.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var Disqus = function Disqus(_ref) {
+  var pageData = _ref.pageData;
+  var script = "\nvar disqus_config = function () {\n  this.page.url = 'https://rafaeleyng.github.io".concat(pageData.url, "';\n  this.page.identifier = '").concat(pageData.url, "';\n};\n\n(function() { // DON'T EDIT BELOW THIS LINE\n  var d = document, s = d.createElement('script');\n  s.src = 'https://rafaeleyng.disqus.com/embed.js';\n  s.setAttribute('data-timestamp', +new Date());\n  (d.head || d.body).appendChild(s);\n})();\n");
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+    id: "disqus_thread",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }), __jsx("script", {
+    type: "text/javascript",
+    dangerouslySetInnerHTML: {
+      __html: script
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }), __jsx("noscript", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, "Please enable JavaScript to view the ", __jsx("a", {
+    href: "https://disqus.com/?ref_noscript",
+    rel: "nofollow",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, "comments powered by Disqus.")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Disqus);
+
+/***/ }),
+
 /***/ "./components/GoogleAnalytics.js":
 /*!***************************************!*\
   !*** ./components/GoogleAnalytics.js ***!
@@ -35104,8 +35160,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_markdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-markdown */ "../node_modules/react-markdown/lib/react-markdown.js");
 /* harmony import */ var react_markdown__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_markdown__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-/* harmony import */ var _utils_date__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/date */ "./utils/date.js");
-/* harmony import */ var _utils_getPosts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/getPosts */ "./utils/getPosts.js");
+/* harmony import */ var _components_Disqus__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Disqus */ "./components/Disqus.js");
+/* harmony import */ var _utils_date__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/date */ "./utils/date.js");
+/* harmony import */ var _utils_getPosts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/getPosts */ "./utils/getPosts.js");
 
 
 var _jsxFileName = "/Users/rafael.eyng/code/rafael/rafaeleyng.github.io/src/pages/post.js";
@@ -35113,7 +35170,7 @@ var _jsxFileName = "/Users/rafael.eyng/code/rafael/rafaeleyng.github.io/src/page
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
- // import Disqus from '../components/Disqus'
+
 
 
 
@@ -35141,13 +35198,13 @@ var Post = function Post(_ref) {
     __self: this
   }, __jsx("time", {
     itemProp: "datePublished",
-    dateTime: Object(_utils_date__WEBPACK_IMPORTED_MODULE_6__["dateMachine"])(post.document.data.date),
+    dateTime: Object(_utils_date__WEBPACK_IMPORTED_MODULE_7__["dateMachine"])(post.document.data.date),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: this
-  }, Object(_utils_date__WEBPACK_IMPORTED_MODULE_6__["dateHuman"])(post.document.data.date))));
+  }, Object(_utils_date__WEBPACK_IMPORTED_MODULE_7__["dateHuman"])(post.document.data.date))));
   /*
     TODO add syntax highlighting:
     https://gist.github.com/ibrahima/d21950a95aee3212e991a8404e238093
@@ -35195,7 +35252,14 @@ var Post = function Post(_ref) {
       lineNumber: 41
     },
     __self: this
-  })));
+  })), __jsx(_components_Disqus__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    pageData: pageData,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }));
 
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
     contentHeader: contentHeader,
@@ -35222,7 +35286,7 @@ function () {
         switch (_context.prev = _context.next) {
           case 0:
             slug = context.query.slug;
-            posts = Object(_utils_getPosts__WEBPACK_IMPORTED_MODULE_7__["default"])();
+            posts = Object(_utils_getPosts__WEBPACK_IMPORTED_MODULE_8__["default"])();
             post = posts.find(function (p) {
               return p.slug === slug;
             });
