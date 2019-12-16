@@ -34795,11 +34795,9 @@ var Disqus = function Disqus(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _data_site__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/site */ "./data/site.js");
 var _jsxFileName = "/Users/rafael.eyng/code/rafael/rafaeleyng.github.io/src/components/GoogleAnalytics.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 var GoogleAnalytics = function GoogleAnalytics() {
   var script = "\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'UA-154633858-1');\n";
@@ -34808,7 +34806,7 @@ var GoogleAnalytics = function GoogleAnalytics() {
     src: "https://www.googletagmanager.com/gtag/js?id=UA-154633858-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 11
     },
     __self: this
   }), __jsx("script", {
@@ -34817,7 +34815,7 @@ var GoogleAnalytics = function GoogleAnalytics() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 12
     },
     __self: this
   }));
@@ -35147,7 +35145,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   title: 'Rafael Eyng\'s Blog',
-  url: 'https://rafaeleyng.github.io/'
+  url: 'https://rafaeleyng.github.io'
 });
 
 /***/ }),
