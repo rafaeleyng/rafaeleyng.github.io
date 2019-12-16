@@ -34856,28 +34856,30 @@ var Head = function Head(_ref) {
       lineNumber: 8
     },
     __self: this
-  }, __jsx("title", {
+  }, __jsx("link", {
+    rel: "preconnect",
+    href: "https://www.google-analytics.com",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }, pageData.title || _data_site__WEBPACK_IMPORTED_MODULE_2__["default"].title), __jsx(_GoogleAnalytics__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx("link", {
+    rel: "preload",
+    href: "https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&display=optional",
+    as: "style",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: this
-  }), __jsx("link", {
-    href: "//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic",
-    rel: "stylesheet",
-    type: "text/css",
+  }), __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     },
     __self: this
-  }), __jsx("link", {
+  }, pageData.title || _data_site__WEBPACK_IMPORTED_MODULE_2__["default"].title), __jsx("link", {
     rel: "canonical",
     href: "".concat(_data_site__WEBPACK_IMPORTED_MODULE_2__["default"].url).concat(pageData.url || ''),
     __source: {
@@ -34931,6 +34933,21 @@ var Head = function Head(_ref) {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
+    },
+    __self: this
+  }), __jsx("link", {
+    href: "https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic",
+    rel: "stylesheet",
+    type: "text/css",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }), __jsx(_GoogleAnalytics__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
     },
     __self: this
   }));
@@ -35092,16 +35109,18 @@ var SiteHeader = function SiteHeader() {
     },
     __self: this
   }, __jsx("a", {
-    href: "https://rafaeleyng.github.io/me",
     target: "_blank",
+    rel: "noopener",
+    href: "https://rafaeleyng.github.io/me",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
   }, "About"), __jsx("a", {
-    href: "https://github.com/rafaeleyng/rafaeleyng.github.io",
     target: "_blank",
+    rel: "noopener",
+    href: "https://github.com/rafaeleyng/rafaeleyng.github.io",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
