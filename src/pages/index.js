@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import cloneDeep from 'lodash/cloneDeep'
 
 import Layout from '../components/Layout'
 
@@ -39,7 +40,8 @@ const Index = ({ posts }) => {
 export default Index
 
 Index.getInitialProps = async function() {
-  const posts = getPosts()
+  const posts = getPosts().map(cloneDeep)
+
   posts.forEach((p) => {
     delete p.document.content
   })
