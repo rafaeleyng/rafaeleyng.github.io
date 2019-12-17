@@ -11,8 +11,6 @@ const Head = ({ pageData = {} }) => {
 
       <title>{pageData.title || site.title}</title>
 
-      <link rel="canonical" href={`${site.url}${pageData.url || ''}`} />
-
       <meta name="description" content={pageData.excerpt || 'Rafael Eyng\'s tech blog'} />
       <meta name="language" content="en" />
       <meta name="content-language" content="en" />
@@ -20,6 +18,8 @@ const Head = ({ pageData = {} }) => {
       <meta name="keywords" content={pageData.keywords || 'software, development, javascript, github, node, docker, blog'} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+      <link rel="canonical" href={`${site.url}${pageData.url || ''}`} />
+      <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <link href="https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&display=optional" rel="stylesheet" type="text/css" />
 
       <GoogleAnalytics />
