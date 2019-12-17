@@ -54,20 +54,12 @@ var Head = function Head(_ref) {
       lineNumber: 12
     },
     __self: this
-  }, pageData.title || _data_site__WEBPACK_IMPORTED_MODULE_2__["default"].title), __jsx("link", {
-    rel: "canonical",
-    href: "".concat(_data_site__WEBPACK_IMPORTED_MODULE_2__["default"].url).concat(pageData.url || ''),
+  }, pageData.title || _data_site__WEBPACK_IMPORTED_MODULE_2__["default"].title), __jsx("meta", {
+    name: "description",
+    content: pageData.excerpt || 'Rafael Eyng\'s tech blog',
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
-    },
-    __self: this
-  }), __jsx("meta", {
-    name: "description",
-    content: pageData.excerpt || '',
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
     },
     __self: this
   }), __jsx("meta", {
@@ -75,7 +67,7 @@ var Head = function Head(_ref) {
     content: "en",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 15
     },
     __self: this
   }), __jsx("meta", {
@@ -83,7 +75,7 @@ var Head = function Head(_ref) {
     content: "en",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 16
     },
     __self: this
   }), __jsx("meta", {
@@ -91,7 +83,7 @@ var Head = function Head(_ref) {
     content: "Rafael Eyng",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 17
     },
     __self: this
   }), __jsx("meta", {
@@ -99,7 +91,7 @@ var Head = function Head(_ref) {
     content: pageData.keywords || 'software, development, javascript, github, node, docker, blog',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 18
     },
     __self: this
   }), __jsx("meta", {
@@ -107,22 +99,38 @@ var Head = function Head(_ref) {
     content: "width=device-width, initial-scale=1",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }), __jsx("link", {
+    rel: "canonical",
+    href: "".concat(_data_site__WEBPACK_IMPORTED_MODULE_2__["default"].url).concat(pageData.url || ''),
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
   }), __jsx("link", {
-    href: "https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic",
+    rel: "shortcut icon",
+    href: "/public/favicon.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }), __jsx("link", {
+    href: "https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&display=optional",
     rel: "stylesheet",
     type: "text/css",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }), __jsx(_GoogleAnalytics__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: this
   }));
@@ -133,4 +141,4 @@ var Head = function Head(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.2483cd5224a172cf04d6.hot-update.js.map
+//# sourceMappingURL=index.js.3b65f28f0fc9cb1f1184.hot-update.js.map
