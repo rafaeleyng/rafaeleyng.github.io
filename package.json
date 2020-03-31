@@ -14,7 +14,7 @@
   "dependencies": {
     "dateformat": "3.0.3",
     "gray-matter": "4.0.2",
-    "next": "9.1.4",
+    "next": "9.3.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-markdown": "4.2.2",
