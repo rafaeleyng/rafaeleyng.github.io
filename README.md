@@ -19,3 +19,11 @@ yarn install # installs Javascript dependencies
 ```shell
 yarn create-post "My new post"
 ```
+
+## deploy
+
+Just commit everything in the `dev` branch and run:
+
+```shell
+yarn deploy
+```
