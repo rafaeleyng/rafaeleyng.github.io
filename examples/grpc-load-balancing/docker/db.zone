@@ -1,0 +1,12 @@
+$ORIGIN demo.local.
+@    IN    SOA    ns1.demo.local. admin.demo.local. (
+                  3        ; Serial
+             604800        ; Refresh
+              86400        ; Retry
+            2419200        ; Expire
+             604800 )    ; Negative Cache TTL
+;
+
+; 192.168.1.0/8 - A records
+my-headless-service.demo.local.	IN A	127.0.0.1
+my-headless-service.demo.local.	IN A	127.0.0.2

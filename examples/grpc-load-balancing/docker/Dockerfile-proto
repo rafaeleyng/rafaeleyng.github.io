@@ -1,0 +1,14 @@
+FROM golang:1.14-buster
+
+RUN apt-get update \
+  && apt-get install unzip
+
+RUN curl -o /tmp/protoc.zip -L https://github.com/protocolbuffers/protobuf/releases/download/v3.12.3/protoc-3.12.3-linux-x86_64.zip \
+  && unzip -o /tmp/protoc.zip -d /usr/local bin/protoc \
+  && unzip -o /tmp/protoc.zip -d /usr/local 'include/*'
+
+WORKDIR /v
+
+ADD ./go.mod .
+
+RUN go get github.com/golang/protobuf/protoc-gen-go@v1.4.0

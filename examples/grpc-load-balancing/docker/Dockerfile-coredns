@@ -1,0 +1,4 @@
+FROM coredns/coredns
+
+ADD docker/Corefile Corefile
+ADD docker/db.zone db.zone

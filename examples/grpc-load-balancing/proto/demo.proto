@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = ".;protos";
+package protos;
+
+service Demo {
+  rpc GetAddress (GetAddressRequest) returns (GetAddressResponse) {}
+}
+
+message GetAddressRequest {}
+
+message GetAddressResponse {
+  string address = 1;
+}
