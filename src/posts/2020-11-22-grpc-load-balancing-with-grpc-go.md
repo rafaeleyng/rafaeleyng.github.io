@@ -8,16 +8,16 @@ excerpt: >
 
 gRPC poses a [known problem](https://kubernetes.io/blog/2018/11/07/grpc-load-balancing-on-kubernetes-without-tears/) for load balancing if you have an L4 load balancer in front of multiple instances of your backend gRPC server.
 
-In short, L4 load balancers balanced at the _connection level_, which for HTTP 1.1 normally is just fine. But gRPC uses HTTP 2, where a single, long-lived connection is kept and all requests are multiplexed within it. So we would need a balancer working at the _request level_.
+In short, L4 load balancers balance at the _connection level_, which for HTTP 1.1 normally works just fine. But gRPC uses HTTP 2, where a single, long-lived connection is kept between an instance of the client and the server and all requests are multiplexed within it. So we would need a balancer working at the _request level_.
 
 My team recently faced that issue, and we used an L4 balancer, in the form of a Kubernetes external service (`type: LoadBalancer`). Since changing that was not an option at the moment, we took the approach of client-side balancing, which itself was hard to set up because the documentation was somewhat lacking. We also considered using a [look-aside](https://grpc.io/blog/grpc-load-balancing/#lookaside-load-balancing) load balancer, but the client-side ended up being easier to implement and maintain.
 
 ## Constraints
 
 We needed a solution that would work well with several constraints since our system runs in a dynamic environment, where the gRPC server instances are not expected to be statically known:
-1. the client must to discover all the instances of the gRPC server and open a single, long-lived connection directly with each one (not going through the load balancer)
-3. if instances of the gRPC server are removed, the client must acknowledge that and remove those connections
-2. similarly, if new instances of the gRPC server are added, the client must create new connections with those new instances
+- the client must to discover all the instances of the gRPC server and open a single, long-lived connection directly with each one (not going through the load balancer)
+- if instances of the gRPC server are removed, the client must acknowledge that and remove those connections
+- similarly, if new instances of the gRPC server are added, the client must create new connections with those new instances
 
 ## DNS name resolution
 
@@ -25,7 +25,7 @@ The gRPC documentation mentions support for [DNS as the default name system](htt
 
 We used the lib go-grpc, which we've found to have support for [DNS resolver](https://github.com/grpc/grpc-go/blob/master/internal/resolver/dns/dns_resolver.go) and also for balancing requests across several instances with various strategies (we went for [round-robin](https://github.com/grpc/grpc-go/blob/master/balancer/roundrobin/roundrobin.go)).
 
-Configuring this was not clearly documented in lib as would I expect. The two main changes we've done in our client were:
+Configuring this was not clearly documented in the lib as would I expect. The two main changes we've done in our client were:
 - add the `WithDefaultServiceConfig` DialOption with the load balancing policy
 - specify a DNS URI pointing to the Headless Server we've mentioned
 
@@ -56,7 +56,7 @@ If I remove instances of my service, it would cause connections to fail and [the
 
 If everything is stable, the client never re-resolves the names and recreates new connections. So, if I double the number of instances of my service, the new ones would never receive connections and would be idle. And this fails constraint 3.
 
-To work around this, we've configured a [MAX_CONNECTION_AGE](https://github.com/grpc/proposal/blob/master/A9-server-side-conn-mgt.md):
+To work around this, we've configured a [MAX_CONNECTION_AGE](https://github.com/grpc/proposal/blob/master/A9-server-side-conn-mgt.md) on the server:
 ```go
 import (
   "google.golang.org/grpc"
