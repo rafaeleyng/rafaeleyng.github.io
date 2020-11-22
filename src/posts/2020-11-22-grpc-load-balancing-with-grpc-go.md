@@ -1,8 +1,9 @@
 ---
 title: "gRPC load balancing with grpc-go"
 date: 2020-11-22
+keywords: grpc, load balancing, golang, kubernetes
 excerpt: >
-  gRPC load balancing with grpc-go
+  A complete explanation of how to setup client-side gRPC load balancing using a DNS naming system.
 ---
 
 gRPC poses a [known problem](https://kubernetes.io/blog/2018/11/07/grpc-load-balancing-on-kubernetes-without-tears/) for load balancing if you have an L4 load balancer in front of multiple instances of your backend gRPC server.

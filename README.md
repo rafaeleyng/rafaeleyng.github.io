@@ -14,6 +14,13 @@ asdf install # installs software specified in `.tool-versions` file
 yarn install # installs Javascript dependencies
 ```
 
+## run
+
+```shell
+yarn run export # to generate the posts files
+yarn start
+```
+
 ## create a post
 
 ```shell
