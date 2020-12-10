@@ -59,7 +59,7 @@ The actual partitioning (the mapping of a key to a Redis server) can happen in d
 - proxy assisted partitioning: a proxy (like [Twemproxy](https://github.com/twitter/twemproxy)) sits in between client and servers and computes the correct server from the key.
 - query routing: is the technique used by Redis Cluster, in which any Redis node can receive a query and will redirect the client to the correct node, given the partitioning scheme.
 
-### Benefits of replication
+### Benefits of partitioning
 
 Partitioning allows you to have larger datasets. If your dataset is 10Gb, but you only have nodes with 4Gb of memory, you can use 3 nodes and partition your data between the 3 nodes.
 
