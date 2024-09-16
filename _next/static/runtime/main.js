@@ -504,7 +504,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/rafael.eyng/code/rafael/rafaeleyng.github.io/src/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/home/rafael/code/rafael/rafaeleyng.github.io/src/.next");
       return error;
     }
   };
